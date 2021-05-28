@@ -1,16 +1,17 @@
 #include<iostream>
 using namespace std;
-//auto¹Ø¼ü×Ö
+//autoå…³é”®å­—
+//auto
 
 
-//auto²»ÄÜ×÷Îª²ÎÊı£¬Ò²²»ÄÜÓÃÓÚÊı×é
+//autoä¸èƒ½ä½œä¸ºå‚æ•°ï¼Œä¹Ÿä¸èƒ½ç”¨äºæ•°ç»„
 int main()
 {
 	int a = 0;
-	auto b = a;//bµÄÀàĞÍÊÇ¸ù¾İaµÄÀàĞÍÍÆµ¼³öint
+	auto b = a;//bçš„ç±»å‹æ˜¯æ ¹æ®açš„ç±»å‹æ¨å¯¼å‡ºint
 
 	cout << typeid(a).name() << endl;
-	//¿ÉÒÔ¿´±äÁ¿µÄÀàĞÍ
+	//å¯ä»¥çœ‹å˜é‡çš„ç±»å‹
 	cout << typeid(a).name() << endl;
 
 	return 0;
