@@ -2,8 +2,8 @@
 #include<iostream>
 using namespace std;
 
-//二叉搜索树
-//树本身和所有子树的左节点都比根小，而右节点都比根大
+二叉搜索树
+树本身和所有子树的左节点都比根小，而右节点都比根大
 
 二叉搜索树实现
 template<class K>
