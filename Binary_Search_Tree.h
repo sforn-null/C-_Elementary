@@ -2,10 +2,10 @@
 #include<iostream>
 using namespace std;
 
-//¶þ²æËÑË÷Ê÷
-//Ê÷±¾ÉíºÍËùÓÐ×ÓÊ÷µÄ×ó½Úµã¶¼±È¸ùÐ¡£¬¶øÓÒ½Úµã¶¼±È¸ù´ó
+//äºŒå‰æœç´¢æ ‘
+//æ ‘æœ¬èº«å’Œæ‰€æœ‰å­æ ‘çš„å·¦èŠ‚ç‚¹éƒ½æ¯”æ ¹å°ï¼Œè€Œå³èŠ‚ç‚¹éƒ½æ¯”æ ¹å¤§
 
-//¶þ²æËÑË÷Ê÷ÊµÏÖ
+äºŒå‰æœç´¢æ ‘å®žçŽ°
 template<class K>
 struct BSTreeNode
 {
@@ -27,7 +27,7 @@ class BSTree
 public:
 	bool Insert(const K& key)
 	{
-		//Ö®ËùÒÔÓÐbool·µ»ØÖµ£¬ÒòÎª²»ÄÜ²åÈëÖØ¸´µÄÊý×Ö
+		//ä¹‹æ‰€ä»¥æœ‰boolè¿”å›žå€¼ï¼Œå› ä¸ºä¸èƒ½æ’å…¥é‡å¤çš„æ•°å­—
 		if (_root == nullptr)
 		{
 			_root = new Node(key);
@@ -120,11 +120,11 @@ public:
 			}
 			else
 			{
-				//ÕÒµ½ÁË£¬¿ªÊ¼É¾³ý
-				//·ÖÎªÈýÖÖÇé¿ö
-				//×óÎª¿Õ
-				//Òª¸ù¾ÝcurÊÇÔÚ¸¸Ç×µÄ×ó±ß»¹ÊÇÓÒ±ß
-				//À´ÅÐ¶ÏÈÃ¸¸Ç×µÄ×ó±ß»¹ÊÇÓÒ±ßÖ¸ÏòcurµÄÓÒ±ß
+				//æ‰¾åˆ°äº†ï¼Œå¼€å§‹åˆ é™¤
+				//åˆ†ä¸ºä¸‰ç§æƒ…å†µ
+				//å·¦ä¸ºç©º
+				//è¦æ ¹æ®curæ˜¯åœ¨çˆ¶äº²çš„å·¦è¾¹è¿˜æ˜¯å³è¾¹
+				//æ¥åˆ¤æ–­è®©çˆ¶äº²çš„å·¦è¾¹è¿˜æ˜¯å³è¾¹æŒ‡å‘curçš„å³è¾¹
 				if (cur->_left == nullptr)
 				{
 					if (cur == _root)
@@ -147,7 +147,7 @@ public:
 				}
 				else if (cur->_right == nullptr)
 				{
-					//ÓÒÎª¿Õ
+					//å³ä¸ºç©º
 					if (cur == _root)
 					{
 						_root = cur->_left;
@@ -168,7 +168,7 @@ public:
 				}
 				else
 				{
-					//¶¼²»Îª¿Õ
+					//éƒ½ä¸ä¸ºç©º
 					Node* rightMinParent = cur;
 					Node* rightMin = cur->_right;
 					while (rightMin->_left)
@@ -176,9 +176,9 @@ public:
 						rightMinParent = rightMin;
 						rightMin = rightMin->_left;
 					}
-					//Ìæ´úÉ¾³ý½Úµã
+					//æ›¿ä»£åˆ é™¤èŠ‚ç‚¹
 					cur->_key = rightMin->_key;
-					//×ª»»³ÉÉ¾³ýrightMin
+					//è½¬æ¢æˆåˆ é™¤rightMin
 					if(rightMin == rightMinParent->_left)
 						rightMinParent->_left = rightMin->_right;
 					else
